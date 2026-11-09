@@ -1,0 +1,21 @@
+LIBRARY user32.dll
+EXPORTS
+    wsprintfA
+    wvsprintfA@12
+    MessageBoxA@16
+    CreateWindowExA@48
+    DestroyWindow@4
+    GetForegroundWindow@0
+    GetWindowThreadProcessId@8
+    MonitorFromWindow@8
+    GetMonitorInfoA@8
+    GetParent@4
+    GetWindowLongA@8
+    GetSystemMetrics@4
+    GetForegroundWindow@0
+    GetWindowThreadProcessId@8
+    IsWindowVisible@4
+    IsIconic@4
+    IsWindow@4
+    GetWindowRect@8
+    CallWindowProcA@20
