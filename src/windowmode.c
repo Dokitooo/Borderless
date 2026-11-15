@@ -11,6 +11,7 @@
 #include <windows.h>
 #include "slam.h"
 #include <d3d9.h>
+#include "d3d9pick.h"
 
 extern const SLAM_API *g_slam; extern SlamMod *g_slamMe; extern void *g_slamInst;
 void glue_migrate(const char *file);
@@ -260,9 +261,10 @@ static HRESULT WINAPI MyCreateDevice(IDirect3D9 *o, UINT a, D3DDEVTYPE t, HWND w
  * CreateDevice slot is ours, so every device the game makes gets the fixes, whatever else wraps Direct3D. */
 static DWORD WINAPI d3d_setup(LPVOID u)
 {
-    HMODULE m; C9_t c9; IDirect3D9 *d; int ok = 0;
+    HMODULE m; C9_t c9; IDirect3D9 *d; int ok = 0; char why[400];
     (void)u;
-    m = LoadLibraryA("d3d9.dll");
+    m = d3d9_pick(why, sizeof why);           /* ReShade & co: their Windows d3d9 underneath, never the wrapper */
+    if (why[0]) rlog("%s", why);
     c9 = m ? (C9_t)GetProcAddress(m, "Direct3DCreate9") : 0;
     if (c9 && (d = c9(D3D_SDK_VERSION))) {
         ok = vt_set(&(*(void ***)d)[16], (void *)MyCreateDevice, (void **)&g_cd);

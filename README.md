@@ -1,8 +1,8 @@
-# Borderless 1.0 — a Borderless window mode for NBA 2K14 (PC)
+# Borderless 1.0.1 — a Borderless window mode for NBA 2K14 (PC)
 
 Borderless adds **Borderless** to *Video Settings > Window Mode* (Windowed / Fullscreen / Borderless) and keeps the mode you picked: if the game, a crash or a restart switches the window back, Borderless puts it back. It also fixes the black or stale blocks in windowed mode and makes the game's VSync work windowed. It is a [SLAM](https://github.com/Dokitooo/SLAM) mod.
 
-**Download:** [Borderless_v1.0.zip](https://github.com/Dokitooo/Borderless/releases/download/v1.0/Borderless_v1.0.zip) (latest release) ·
+**Download:** [Borderless_v1.0.1.zip](https://github.com/Dokitooo/Borderless/releases/download/v1.0.1/Borderless_v1.0.1.zip) (latest release) ·
 [all releases](https://github.com/Dokitooo/Borderless/releases)
 
 ## Requirements
@@ -18,7 +18,7 @@ Borderless adds **Borderless** to *Video Settings > Window Mode* (Windowed / Ful
    SLAM\Borderless\Borderless.asi
    SLAM\Borderless\Borderless.ini
    ```
-3. Start the game. The mod list at the top left shows `Borderless 1.0`.
+3. Start the game. The mod list at the top left shows `Borderless 1.0.1`.
 
 Pick the mode in *Video Settings*. It is applied and saved when the game asks "Video settings have been changed. Do you want to apply the new settings?" and you answer Yes.
 
@@ -53,7 +53,7 @@ Every release lists the SHA-256 of the zip in `SHA256SUMS.txt` (also attached to
 Compare it with the hash of the file you downloaded:
 
 ```powershell
-Get-FileHash .\Borderless_v1.0.zip -Algorithm SHA256
+Get-FileHash .\Borderless_v1.0.1.zip -Algorithm SHA256
 ```
 
 ```bash

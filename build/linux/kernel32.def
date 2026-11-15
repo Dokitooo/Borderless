@@ -55,3 +55,5 @@ EXPORTS
     TlsAlloc@0
     TlsGetValue@4
     TlsSetValue@8
+    GetSystemDirectoryA@8
+    GetWindowsDirectoryA@8
